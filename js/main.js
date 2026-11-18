@@ -1,5 +1,5 @@
 /* ============================================================
-   BHARAT DARSANAM — Main JavaScript
+   BHARAT DARSHANAM — Main JavaScript
    Owner  : Gajendra Singh
    Mobile : +91 95113 33174
    ============================================================ */
@@ -299,7 +299,7 @@ document.addEventListener('keydown', (e) => {
 
 // ── 12. SPLASH SCREEN ────────────────────────────────────────
 // Sequence:
-// 0.3s  → "Welcome to Bharat Darsanam" fades in
+// 0.3s  → "Welcome to Bharat Darshanam" fades in
 // 1.2s  → Logo bounces in
 // 2.0s  → Typing starts: "Journey to India's Soul" letter by letter
 // ~4.4s → Typing complete + loader fills
