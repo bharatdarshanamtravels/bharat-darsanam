@@ -334,7 +334,7 @@ section { padding: 90px 5%; }
 .pkg-himalaya    .pkg-img-bg { background: url('../images/himalaya.jpg') center/cover no-repeat; }
 .pkg-rajasthan   .pkg-img-bg { background: url('../images/rajasthan.jpg') center/cover no-repeat; }
 .pkg-south       .pkg-img-bg { background: url('../images/south-india.jpg') center/cover no-repeat; }
-.pkg-chardham    .pkg-img-bg { background: url('../images/gallery10.jpg') center/cover no-repeat; }
+.pkg-chardham    .pkg-img-bg { background: url('../images/char-dham.svg') center/cover no-repeat; }
 .pkg-valley      .pkg-img-bg { background: url('../images/valley-flowers.jpg') center/cover no-repeat; }
 .pkg-zanskar     .pkg-img-bg { background: url('../images/zanskar.jpg') center/cover no-repeat; background-color: #1a2a3a; }
 .pkg-spiti       .pkg-img-bg { background: url('../images/spiti.jpg') center/cover no-repeat; background-color: #2a1a0a; }
@@ -1536,3 +1536,5 @@ section { padding: 90px 5%; }
 .pkg-closed-note strong { display: block; margin-bottom: 4px; color: #b42318; }
 .pkg-card.is-closed .pkg-details-link { display: none; }
 .pkg-prebook-btn { background: #6b4f2a !important; }
+
+.pkg-chardham .pkg-img-bg { background-size: 100% 100% !important; }
