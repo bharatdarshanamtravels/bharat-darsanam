@@ -334,7 +334,7 @@ section { padding: 90px 5%; }
 .pkg-himalaya    .pkg-img-bg { background: url('../images/himalaya.jpg') center/cover no-repeat; }
 .pkg-rajasthan   .pkg-img-bg { background: url('../images/rajasthan.jpg') center/cover no-repeat; }
 .pkg-south       .pkg-img-bg { background: url('../images/south-india.jpg') center/cover no-repeat; }
-.pkg-chardham    .pkg-img-bg { background: url('../images/char-dham.jpg') center/cover no-repeat; }
+.pkg-chardham    .pkg-img-bg { background: url('../images/gallery10.jpg') center/cover no-repeat; }
 .pkg-valley      .pkg-img-bg { background: url('../images/valley-flowers.jpg') center/cover no-repeat; }
 .pkg-zanskar     .pkg-img-bg { background: url('../images/zanskar.jpg') center/cover no-repeat; background-color: #1a2a3a; }
 .pkg-spiti       .pkg-img-bg { background: url('../images/spiti.jpg') center/cover no-repeat; background-color: #2a1a0a; }
@@ -1496,3 +1496,16 @@ section { padding: 90px 5%; }
   letter-spacing: 0.5px;
 }
 
+
+/* ── Preview-1 fixes ── */
+[hidden] { display: none !important; }
+.pkg-details-link { font-size: 1rem; text-decoration: none; }
+.pkg-details-link:hover { text-decoration: underline; }
+.nav-wa { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+@media (min-width: 641px) and (max-width: 1200px) {
+  #navbar { padding: 0 3%; }
+  .nav-links { gap: 14px; }
+  .nav-links a { font-size: 0.76rem; letter-spacing: 0.5px; }
+  .nav-logo-text { font-size: 1.15rem; white-space: nowrap; }
+  .nav-logo-img { width: 38px; height: 38px; }
+}

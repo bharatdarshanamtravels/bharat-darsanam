@@ -325,20 +325,14 @@ function typeSplashTagline() {
 }
 
 if (splash) {
-  document.body.style.overflow = 'hidden';
-
-  // Start typing after logo has appeared (1.2s logo + 0.8s settle = 2.0s)
-  setTimeout(typeSplashTagline, 2000);
-
-  // Hide splash after full sequence completes
-  setTimeout(() => {
+  let seen = false;
+  try { seen = sessionStorage.getItem('bdSplashSeen') === '1'; sessionStorage.setItem('bdSplashSeen', '1'); } catch (e) {}
+  if (seen) {
     splash.classList.add('hidden');
-    document.body.style.overflow = '';
-  }, 5500);
-
-  // Click anywhere to skip instantly
-  splash.addEventListener('click', () => {
-    splash.classList.add('hidden');
-    document.body.style.overflow = '';
-  });
+  } else {
+    document.body.style.overflow = 'hidden';
+    setTimeout(typeSplashTagline, 500);
+    setTimeout(() => { splash.classList.add('hidden'); document.body.style.overflow = ''; }, 2200);
+    splash.addEventListener('click', () => { splash.classList.add('hidden'); document.body.style.overflow = ''; });
+  }
 }
