@@ -128,6 +128,55 @@ function showFormMessage(text, type) {
   setTimeout(() => { if (msg) msg.remove(); }, 4000);
 }
 
+// ── 5b. SEASONALLY CLOSED PACKAGES ──────────────────────────
+// To reopen a package, delete its line from this list.
+const CLOSED_PACKAGES = {
+  'The Grand Ladakh Circuit': { opens: 'May 2027', reason: "Ladakh's high passes are snowbound in winter and the Manali–Leh and Srinagar–Leh highways close. The road circuit runs roughly from May–June to September." },
+  'The Wild Zanskar Expedition': { opens: 'June 2027', reason: 'Zanskar is cut off by heavy snow in winter and its mountain passes close. The season runs roughly from June to September.' },
+  'The Great Spiti Journey': { opens: 'May 2027', reason: 'Kunzum Pass and the high roads into Spiti are snowbound in winter, so the full Spiti circuit is not possible. The season runs roughly from May to October.' },
+  'The Sacred Char Dham Pilgrimage': { opens: 'April–May 2027', reason: 'The temples of Yamunotri, Gangotri, Kedarnath and Badrinath close for winter every year and reopen around Akshaya Tritiya (April–May).' },
+  'Hampta Pass Trek': { opens: 'June 2027', reason: 'Hampta Pass is under deep snow in winter and the trail is not safe. The trek season runs roughly from June to early October.' },
+  'Valley of Flowers Trek': { opens: 'June 2027', reason: 'Valley of Flowers National Park is open only from 1 June to 31 October each year.' }
+};
+document.querySelectorAll('.pkg-book-btn').forEach(btn => {
+  const name = btn.getAttribute('data-pkg');
+  const info = CLOSED_PACKAGES[name];
+  if (!info) return;
+  const card = btn.closest('.pkg-card');
+  if (!card) return;
+  card.classList.add('is-closed');
+  const img = card.querySelector('.pkg-img');
+  if (img) {
+    const badge = document.createElement('span');
+    badge.className = 'pkg-closed-badge';
+    badge.textContent = '⛔ Temporarily Closed';
+    img.appendChild(badge);
+  }
+  const footer = card.querySelector('.pkg-footer');
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'pkg-closed-toggle';
+  toggle.textContent = 'ⓘ Why closed?';
+  const note = document.createElement('div');
+  note.className = 'pkg-closed-note';
+  note.hidden = true;
+  note.innerHTML = '<strong>Closed for the season · Opens ' + info.opens + '</strong>' + info.reason;
+  toggle.addEventListener('click', () => {
+    note.hidden = !note.hidden;
+    toggle.textContent = note.hidden ? 'ⓘ Why closed?' : '✕ Hide';
+  });
+  if (footer) { footer.before(toggle); footer.before(note); }
+  btn.classList.remove('pkg-book-btn');
+  btn.classList.add('pkg-prebook-btn');
+  btn.textContent = 'Pre-book 2027';
+  const grid = card.parentElement;
+  if (grid) grid.appendChild(card); // move closed packages to the end
+  btn.addEventListener('click', () => {
+    const t = `Hello Gajendra Singh! 🙏\n\nI'd like to pre-book the *${name}* package for the ${info.opens} season.\n\nPlease share the dates and details.`;
+    window.open(`https://wa.me/919511333174?text=${encodeURIComponent(t)}`, '_blank');
+  });
+});
+
 // ── 6. PACKAGE BOOK BUTTON — WhatsApp pre-fill ───────────────
 document.querySelectorAll('.pkg-book-btn').forEach(btn => {
   btn.addEventListener('click', () => {
