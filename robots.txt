@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bharatdarsanamtravels.com/sitemap.xml
+Sitemap: https://bharatdarshanamtravels.com/sitemap.xml
