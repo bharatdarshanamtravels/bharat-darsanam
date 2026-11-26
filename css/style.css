@@ -333,6 +333,7 @@ section { padding: 90px 5%; }
 /* Package card photos */
 .pkg-himalaya    .pkg-img-bg { background: url('../images/himalaya.jpg') center/cover no-repeat; }
 .pkg-rajasthan   .pkg-img-bg { background: url('../images/rajasthan.jpg') center/cover no-repeat; }
+.pkg-jaipur      .pkg-img-bg { background: url('../images/gallery9.jpg') center/cover no-repeat; background-color: #5c3a1a; }
 .pkg-south       .pkg-img-bg { background: url('../images/south-india.jpg') center/cover no-repeat; }
 .pkg-chardham    .pkg-img-bg { background: url('../images/char-dham.svg') center/cover no-repeat; }
 .pkg-valley      .pkg-img-bg { background: url('../images/valley-flowers.jpg') center/cover no-repeat; }
@@ -1545,3 +1546,4 @@ section { padding: 90px 5%; }
 .form-msg.success { background: #d4edda; color: #155724; }
 .form-msg.error   { background: #f8d7da; color: #721c24; }
 .form-msg a { color: inherit; text-decoration: underline; }
+a.pkg-img { display: block; }
