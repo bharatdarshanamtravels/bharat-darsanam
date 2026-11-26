@@ -24,6 +24,13 @@ Website of Bharat Darshanam Travels (bharatdarshanamtravels.com). Tagline: "Jour
 2. Every trip page: price-from, day-wise itinerary, inclusions/exclusions, a WhatsApp enquiry button and an enquiry form that goes to info@.
 3. Reviews section with real reviews only.
 4. Booking flow: trip page → booking form (name, phone, email, trip, departure date, pax) → payment gateway (30% advance or full payment) → every paid booking saved with its details and emailed to bookings@.
+   - Agreed payment options (decided 26 Nov 2026):
+     - Full payment online via Razorpay (credit/debit card, UPI, netbanking). Booking confirmed at once.
+     - Or 30% advance online via Razorpay (confirmed at once), balance via direct UPI to the business account before departure. The customer submits the UTR/transaction ID and a screenshot on the website; the team verifies it in the bank app before marking the balance paid. Never confirm from a screenshot alone.
+     - For a customer who wants to pay the balance by card, the team can send a Razorpay payment link.
+   - No customer login at first: booking ID + phone. Team needs an admin view (bookings, balance pending/paid, seats left).
+   - Show "X seats left" per departure date.
+   - Planned stack: Cloudflare Pages (free plan allows business use; Vercel's free plan does not), Supabase, Razorpay, Resend. Keys only in environment variables.
 5. Pages the payment gateway needs: Privacy Policy, Terms, Cancellation & Refund Policy, Contact.
 6. Basic SEO: titles, descriptions, Open Graph images, sitemap.
 
