@@ -49,6 +49,7 @@ Website of Bharat Darshanam Travels (bharatdarshanamtravels.com). Tagline: "Jour
 - Work from the change list I give. Don't redesign pages I didn't ask about.
 - Before a big change, show a short plan in bullets and wait for my yes. If something is unclear or you disagree, ask.
 - Small, focused commits. Explain each change in one line.
+- Versions: every push that changes the live website gets the next version number (v1, v2, v3...). Add an annotated git tag on the pushed commit, push the tag, and add a row to VERSIONS.md (number, date, what changed in easy words, commit). Changes to CLAUDE.md or VERSIONS.md alone do not get a number. When asked to go back to a version, restore that tag's files in a new commit (never delete history or force-push), show the preview, and give it the next number.
 - Never commit secrets (API keys, payment gateway keys). Use environment variables.
 - Suggest a better library, tool or repo if one would clearly do the job better.
 - Keep sessions focused to save usage: one change list per session.
