@@ -1,0 +1,46 @@
+# Bharat Darshanam Travels: website
+
+Website of Bharat Darshanam Travels (bharatdarshanamtravels.com). Tagline: "Journeys to India's Soul". Owner: Gajendra Singh, founder (people usually call him Yuvraj; use "Gajendra Singh" on the website and in legal pages). Team: Rupesh (Marketing), Rupesh P (Sales), Ayush.
+
+## Business context
+
+- Main focus now: Rajasthan trips, shown by a local (founder is from Sikar, a trained tourist guide). Mountain trips (Uttarakhand, Himachal, Ladakh, J&K) are being added, led by a BMC-certified team.
+- Audience: 18–40, from metro, tier-1 and tier-2 cities. Mostly on mobile.
+- Trip types: fixed-departure group trips and private custom trips.
+- Price guide: Rajasthan 7–8 days ₹20,000–22,000 per person; Jaipur weekend (Delhi to Delhi) ₹6,000. Never invent prices, dates or inclusions; leave a clear TODO instead.
+- Not GST registered yet: show no GST on prices.
+
+## Brand
+
+- Look: minimal, clean, white, energetic, with one strong accent colour (to be fixed in the Design System).
+- Tone: friendly, humble, honest. English on the website.
+- Follow the Bharat Darshanam Design System for colours, fonts and components once it exists.
+- Use real trip photos for destinations and trips. AI images only for backgrounds or illustrations, never as "real" trip moments.
+
+## Priorities
+
+1. Fast and clean on mobile.
+2. Every trip page: price-from, day-wise itinerary, inclusions/exclusions, a WhatsApp enquiry button and an enquiry form that goes to info@.
+3. Reviews section with real reviews only.
+4. Booking flow: trip page → booking form (name, phone, email, trip, departure date, pax) → payment gateway (30% advance or full payment) → every paid booking saved with its details and emailed to bookings@.
+5. Pages the payment gateway needs: Privacy Policy, Terms, Cancellation & Refund Policy, Contact.
+6. Basic SEO: titles, descriptions, Open Graph images, sitemap.
+
+## Cancellation policy (use on the Cancellation & Refund page)
+
+- 30+ days before departure: refund of the amount paid minus 10% of the trip cost
+- 15–29 days: 50% of the trip cost refunded
+- 7–14 days: 25% refunded
+- Under 7 days or no-show: no refund
+- Free option: transfer the booking to a friend or move to a later departure (subject to availability)
+- Trips changed or cut short by weather, landslides, roadblocks or government orders: no refund for unused services; any vendor refund is passed on
+
+## How to work
+
+- Work from the change list I give. Don't redesign pages I didn't ask about.
+- Before a big change, show a short plan in bullets and wait for my yes. If something is unclear or you disagree, ask.
+- Small, focused commits. Explain each change in one line.
+- Never commit secrets (API keys, payment gateway keys). Use environment variables.
+- Suggest a better library, tool or repo if one would clearly do the job better.
+- Keep sessions focused to save usage: one change list per session.
+- Reply in bullet points; Hinglish is fine.
