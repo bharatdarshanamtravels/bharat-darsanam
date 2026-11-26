@@ -1,5 +1,5 @@
 /* ============================================================
-   BHARAT DARSHANAM — Main JavaScript
+   BHARAT DARSHANAM - Main JavaScript
    Owner  : Gajendra Singh
    Mobile : +91 95113 33174
    ============================================================ */
@@ -132,7 +132,7 @@ document.querySelectorAll('.pkg-book-btn').forEach(btn => {
   });
 });
 
-// ── 6. PACKAGE BOOK BUTTON — WhatsApp pre-fill ───────────────
+// ── 6. PACKAGE BOOK BUTTON - WhatsApp pre-fill ───────────────
 document.querySelectorAll('.pkg-book-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const pkgName = btn.getAttribute('data-pkg');
@@ -323,7 +323,7 @@ function typeSplashTagline() {
       i++;
       setTimeout(typeNext, speed);
     }
-    // typing done — cursor keeps blinking via CSS
+    // typing done - cursor keeps blinking via CSS
   }
   typeNext();
 }

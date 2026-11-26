@@ -1,5 +1,5 @@
 /* ============================================================
-   BHARAT DARSHANAM — Main Stylesheet
+   BHARAT DARSHANAM - Main Stylesheet
    Owner  : Gajendra Singh
    Mobile : +91 95113 33174
    ============================================================ */
@@ -670,7 +670,7 @@ section { padding: 90px 5%; }
 
 
 /* ══════════════════════════════════════════
-   HERO — FULL SCREEN SLIDER
+   HERO - FULL SCREEN SLIDER
    (Rajasthan Tourism style)
 ══════════════════════════════════════════ */
 #hero {
@@ -815,7 +815,7 @@ section { padding: 90px 5%; }
   border-radius: 5px;
 }
 
-/* Stats Bar — bottom strip like Rajasthan Tourism */
+/* Stats Bar - bottom strip like Rajasthan Tourism */
 .hero-stats-bar {
   position: absolute;
   bottom: 0; left: 0; right: 0;
@@ -885,7 +885,7 @@ section { padding: 90px 5%; }
 .gfilter:hover { border-color: var(--saffron); color: var(--saffron); }
 .gfilter.active { background: var(--saffron); border-color: var(--saffron); color: #fff; }
 
-/* Gallery Grid — Masonry style */
+/* Gallery Grid - Masonry style */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1179,7 +1179,7 @@ section { padding: 90px 5%; }
   color: var(--saffron);
 }
 
-/* ── Step 2: Logo — clean circle, no rings ── */
+/* ── Step 2: Logo - clean circle, no rings ── */
 .splash-logo-wrap {
   animation: splashLogoIn 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 1.2s both;
 }
@@ -1194,7 +1194,7 @@ section { padding: 90px 5%; }
   display: block;
 }
 
-/* ── Step 3: Tagline — typing cursor style ── */
+/* ── Step 3: Tagline - typing cursor style ── */
 .splash-tagline {
   font-family: 'Playfair Display', serif;
   font-size: 1.15rem;
@@ -1251,7 +1251,7 @@ section { padding: 90px 5%; }
 
 
 /* ══════════════════════════════════════════
-   NAVBAR LOGO — Image + Text together
+   NAVBAR LOGO - Image + Text together
 ══════════════════════════════════════════ */
 .nav-logo {
   display: flex;
@@ -1286,7 +1286,7 @@ section { padding: 90px 5%; }
 
 
 /* ══════════════════════════════════════════
-   FOOTER LOGO — Image + Text together
+   FOOTER LOGO - Image + Text together
 ══════════════════════════════════════════ */
 .footer-logo-wrap {
   display: flex;
@@ -1316,22 +1316,22 @@ section { padding: 90px 5%; }
 
 
 /* ══════════════════════════════════════════
-   HERO — Fix badge visibility + increase height
+   HERO - Fix badge visibility + increase height
 ══════════════════════════════════════════ */
 
-/* Override old hero height — make it taller so badge never hides */
+/* Override old hero height - make it taller so badge never hides */
 #hero {
   height: 100vh;
-  min-height: 700px;  /* was 600px — increased */
+  min-height: 700px;  /* was 600px - increased */
 }
 
-/* Hero content — more padding top so it sits lower, away from navbar */
+/* Hero content - more padding top so it sits lower, away from navbar */
 .hero-content {
   padding-top: 68px; /* exactly navbar height */
   margin-bottom: 100px; /* push up from stats bar */
 }
 
-/* Hero badge — always visible, never gets cut */
+/* Hero badge - always visible, never gets cut */
 .hero-badge {
   font-size: 0.72rem;
   padding: 5px 18px;
@@ -1341,13 +1341,13 @@ section { padding: 90px 5%; }
   max-width: 90vw;
 }
 
-/* Stats bar — fixed height so it never overlaps content */
+/* Stats bar - fixed height so it never overlaps content */
 .hero-stats-bar {
   height: 80px;
   padding: 0 40px;
 }
 
-/* Dots — move up from stats bar */
+/* Dots - move up from stats bar */
 .slider-dots {
   bottom: 92px;
 }
@@ -1408,7 +1408,7 @@ section { padding: 90px 5%; }
   animation: splashFadeIn 0.8s ease 0.7s both;
 }
 .welcome-brand span { color: var(--saffron); }
-/* ══ OUR STORY — Photo ══ */
+/* ══ OUR STORY - Photo ══ */
 .about-story-img {
   position: absolute;
   inset: 0;
