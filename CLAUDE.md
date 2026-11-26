@@ -14,6 +14,7 @@ Website of Bharat Darshanam Travels (bharatdarshanamtravels.com). Tagline: "Jour
 
 - Look: minimal, clean, white, energetic, with one strong accent colour (to be fixed in the Design System).
 - Tone: friendly, humble, honest. English on the website.
+- No Hindi anywhere on the website or in mockups: no Hindi text, taglines, metadata or Devanagari fonts.
 - Follow the Bharat Darshanam Design System for colours, fonts and components once it exists.
 - Use real trip photos for destinations and trips. AI images only for backgrounds or illustrations, never as "real" trip moments.
 
