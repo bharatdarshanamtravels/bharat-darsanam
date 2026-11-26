@@ -385,3 +385,15 @@ if (splash) {
     splash.addEventListener('click', () => { splash.classList.add('hidden'); document.body.style.overflow = ''; });
   }
 }
+
+// ── LAZY GALLERY IMAGES ──────────────────────────────────────
+// Gallery photos load only when they come near the screen (faster on mobile).
+(function () {
+  const items = document.querySelectorAll('[data-bg]');
+  const load = el => { el.style.backgroundImage = `url('${el.dataset.bg}')`; el.removeAttribute('data-bg'); };
+  if (!('IntersectionObserver' in window)) { items.forEach(load); return; }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { load(e.target); io.unobserve(e.target); } });
+  }, { rootMargin: '300px' });
+  items.forEach(el => io.observe(el));
+})();
