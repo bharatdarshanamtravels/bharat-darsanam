@@ -18,20 +18,23 @@ document.querySelectorAll('form[data-enquiry]').forEach(form => {
     };
 
     if (!data.name || !data.phone || !data.email || !data.trip) {
-      return showMsg(form, '❗ Please fill in all required fields.', 'error');
+      return showMsg(form, 'Please fill in all required fields.', 'error');
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email)) {
+      return showMsg(form, "Please enter a valid email address.", "error");
     }
     const digits = data.phone.replace(/[\s+\-]/g, '');
     if (!/^\d{10,15}$/.test(digits)) {
-      return showMsg(form, '❗ Please enter a valid phone number.', 'error');
+      return showMsg(form, 'Please enter a valid phone number.', 'error');
     }
 
-    const waText = `Hello Gajendra Singh! 🙏\n\n*Name:* ${data.name}\n*Phone:* ${data.phone}\n*Email:* ${data.email}\n*Trip:* ${data.trip}\n*Message:* ${data.message || '-'}`;
+    const waText = `Hello Gajendra Singh!\n\n*Name:* ${data.name}\n*Phone:* ${data.phone}\n*Email:* ${data.email}\n*Trip:* ${data.trip}\n*Message:* ${data.message || '-'}`;
     const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
 
     // Key not set yet → fall back to WhatsApp so no enquiry is lost.
     if (WEB3FORMS_KEY.startsWith('TODO')) {
       window.open(waLink, '_blank');
-      return showMsg(form, '✅ Opening WhatsApp to send your enquiry…', 'success');
+      return showMsg(form, 'Opening WhatsApp to send your enquiry…', 'success');
     }
 
     const btn = form.querySelector('[type=submit]');
@@ -52,9 +55,9 @@ document.querySelectorAll('form[data-enquiry]').forEach(form => {
       const out = await res.json();
       if (!out.success) throw new Error(out.message);
       form.reset();
-      showMsg(form, '✅ Thank you! We got your enquiry and will reply soon.', 'success', waLink);
+      showMsg(form, 'Thank you! We got your enquiry and will reply soon.', 'success', waLink);
     } catch (err) {
-      showMsg(form, '❗ Could not send right now. Please send it on WhatsApp instead.', 'error', waLink);
+      showMsg(form, 'Could not send right now. Please send it on WhatsApp instead.', 'error', waLink);
     } finally {
       if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label; }
     }
@@ -74,7 +77,7 @@ function showMsg(form, text, type, waLink) {
   if (waLink) {
     const a = document.createElement('a');
     a.href = waLink; a.target = '_blank'; a.rel = 'noopener';
-    a.textContent = ' Chat on WhatsApp →';
+    a.textContent = " Chat on WhatsApp";
     msg.appendChild(a);
   }
 }
