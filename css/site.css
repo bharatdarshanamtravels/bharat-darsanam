@@ -101,6 +101,7 @@ section { padding: 56px 0; }
 .badge { position: absolute; top: 12px; left: 12px; background: var(--warm-soft); color: var(--warm-ink); font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px; }
 .badge.cool { background: var(--accent-soft); color: var(--accent-dark); }
 .badge.closed { left: auto; right: 12px; background: var(--deep); color: #fff; }
+.badges-bottom .badge { top: auto; bottom: 12px; }
 .trip-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
 .trip-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13px; color: var(--muted); }
 .trip-meta span { display: flex; align-items: center; gap: 5px; }
