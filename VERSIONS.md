@@ -13,5 +13,5 @@ Each number is also a git tag (`v1`, `v2`, ...) on GitHub, so the exact files ar
 
 ## How going back works
 
-- We never delete history. Going back to an old version makes a new version with the old files, for example "v5 = same as v2".
+- We never delete history. Going back to an old version makes a new version with the old files, for example "v8 = same as v2".
 - Then it goes live like any other change (preview first, then push).
