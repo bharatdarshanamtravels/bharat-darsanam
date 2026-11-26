@@ -5,6 +5,7 @@ Each number is also a git tag (`v1`, `v2`, ...) on GitHub, so the exact files ar
 
 | Version | Date | What changed | Commit |
 |---|---|---|---|
+| v5 | 26 Nov 2026 | Char Dham card: new five-temple image (Yamunotri, Gangotri, Kedarnath, Badrinath, Dhari Devi), card labels moved to the bottom. | 2537f8f |
 | v4 | 26 Nov 2026 | SEO: Rajasthan-first homepage title and description, business and trip data for Google, trip share images. Lighter photos (720px versions, small header logo). | 103dd33 |
 | v3 | 26 Nov 2026 | New design: theme C "Peacock" on all pages, header menu, mobile menu. Yellow TODO notes replaced with customer text. Form messages without emojis, email check. | 7d25839 |
 | v2 | 26 Nov 2026 | Old design with fixes: Privacy, Terms, Refund and Contact pages; Rajasthan and Jaipur weekend trip pages; enquiry form; compressed photos; favicons and share image; em dashes and Hindi removed; refund in 7 working days. | 3522d61 |
