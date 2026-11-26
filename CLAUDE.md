@@ -14,6 +14,7 @@ Website of Bharat Darshanam Travels (bharatdarshanamtravels.com). Tagline: "Jour
 
 - Look: minimal, clean, white, energetic, with one strong accent colour (to be fixed in the Design System).
 - Tone: friendly, humble, honest. English on the website.
+- All site text is in English: no Hindi or Hinglish, except the proper nouns and greetings allowed in the Company Brief's LANGUAGE RULE.
 - No Hindi anywhere on the website or in mockups: no Hindi text, taglines, metadata or Devanagari fonts.
 - Chosen design (26 Nov 2026): mockup option C "Peacock". Teal #0F7470 (dark #08393A) as the accent, warm #F2A23A for highlights, background #FBF8F3, font Anek Latin, corner radius 16px.
 - Follow the Bharat Darshanam Design System for colours, fonts and components once it exists.
