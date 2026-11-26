@@ -83,51 +83,6 @@ scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// ── 5. CONTACT FORM ───────────────────────────────────────────
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  const name    = document.getElementById('fname').value.trim();
-  const phone   = document.getElementById('fphone').value.trim();
-  const email   = document.getElementById('femail').value.trim();
-  const pkg     = document.getElementById('fpkg').value;
-  const message = document.getElementById('fmessage').value.trim();
-
-  // Basic validation
-  if (!name || !phone || !email || !pkg) {
-    showFormMessage('❗ Please fill in all required fields.', 'error');
-    return;
-  }
-  if (phone.length < 10 || phone.length > 15 || !/^\d+$/.test(phone)) {
-    showFormMessage('❗ Please enter a valid 10-15 digit phone number.', 'error');
-    return;
-  }
-
-  // Build WhatsApp message and redirect
-  const waText = `Hello Gajendra Singh! 🙏\n\nI'm interested in a tour package.\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Package:* ${pkg}\n*Message:* ${message || 'No additional message.'}`;
-  const waURL  = `https://wa.me/919511333174?text=${encodeURIComponent(waText)}`;
-
-  showFormMessage('✅ Redirecting you to WhatsApp...', 'success');
-  setTimeout(() => { window.open(waURL, '_blank'); }, 1000);
-  contactForm.reset();
-});
-
-function showFormMessage(text, type) {
-  let msg = document.getElementById('formMsg');
-  if (!msg) {
-    msg = document.createElement('p');
-    msg.id = 'formMsg';
-    msg.style.cssText = 'margin-top:12px; font-size:0.9rem; font-weight:600; padding:10px 14px; border-radius:8px;';
-    contactForm.appendChild(msg);
-  }
-  msg.textContent = text;
-  msg.style.background = type === 'success' ? '#d4edda' : '#f8d7da';
-  msg.style.color       = type === 'success' ? '#155724' : '#721c24';
-  setTimeout(() => { if (msg) msg.remove(); }, 4000);
-}
-
 // ── 5b. SEASONALLY CLOSED PACKAGES ──────────────────────────
 // To reopen a package, delete its line from this list.
 const CLOSED_PACKAGES = {

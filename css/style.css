@@ -1538,3 +1538,10 @@ section { padding: 90px 5%; }
 .pkg-prebook-btn { background: #6b4f2a !important; }
 
 .pkg-chardham .pkg-img-bg { background-size: 100% 100% !important; }
+
+/* ── Enquiry form messages + spam trap ── */
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form-msg { margin-top: 12px; font-size: 0.9rem; font-weight: 600; padding: 10px 14px; border-radius: 8px; }
+.form-msg.success { background: #d4edda; color: #155724; }
+.form-msg.error   { background: #f8d7da; color: #721c24; }
+.form-msg a { color: inherit; text-decoration: underline; }

@@ -576,40 +576,44 @@
     <div class="reveal">
       <div class="contact-form">
         <h3>📋 Send an Inquiry</h3>
-        <form id="contactForm" novalidate>
+        <form id="contactForm" data-enquiry novalidate>
+          <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="form-row">
             <div class="form-group">
               <label for="fname">Your Full Name *</label>
-              <input type="text" id="fname" placeholder="Your full name" required>
+              <input type="text" id="fname" name="name" placeholder="Your full name" autocomplete="name" required>
             </div>
             <div class="form-group">
               <label for="fphone">Phone Number *</label>
-              <input type="tel" id="fphone" placeholder="+91 XXXXX XXXXX" required>
+              <input type="tel" id="fphone" name="phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel" required>
             </div>
           </div>
           <div class="form-group">
             <label for="femail">Email Address *</label>
-            <input type="email" id="femail" placeholder="you@gmail.com" required>
+            <input type="email" id="femail" name="email" placeholder="you@gmail.com" autocomplete="email" required>
           </div>
           <div class="form-group">
             <label for="fpkg">Interested Package *</label>
-            <select id="fpkg" required>
+            <select id="fpkg" name="trip" required>
               <option value="">Select a package...</option>
+              <option>Rajasthan Trip (7–8 Days)</option>
+              <option>Jaipur Weekend Trip (Delhi to Delhi)</option>
+              <option>The Royal Rajasthan Odyssey</option>
+              <option>Kedarkantha Trek</option>
               <option>The Grand Ladakh Circuit</option>
+              <option>The Wild Zanskar Expedition</option>
               <option>The Great Spiti Journey</option>
               <option>The Sacred Char Dham Pilgrimage</option>
-              <option>The Royal Rajasthan Odyssey</option>
               <option>Hampta Pass Trek</option>
-              <option>Kedarkantha Trek</option>
               <option>Valley of Flowers Trek</option>
               <option>Custom Package</option>
             </select>
           </div>
           <div class="form-group">
             <label for="fmessage">Your Message</label>
-            <textarea id="fmessage" placeholder="Tell us about your travel dates, group size, or any special requirements..."></textarea>
+            <textarea id="fmessage" name="message" placeholder="Tell us about your travel dates, group size, or any special requirements..."></textarea>
           </div>
-          <button type="submit" class="submit-btn">🚀 Send Inquiry via WhatsApp</button>
+          <button type="submit" class="submit-btn">🚀 Send Enquiry</button>
         </form>
       </div>
     </div>
@@ -825,6 +829,7 @@
 
 <!-- ── JavaScript ── -->
 <script src="js/main.js"></script>
+<script src="js/enquiry.js"></script>
 
 <script type="application/ld+json">
 {
